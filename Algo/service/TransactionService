@@ -1,0 +1,89 @@
+Classe TransactionService
+
+    private transactionRepository : TransactionRepository
+    private categorieRepository : CategorieRepository
+    private budgetRepository : BudgetRepository
+    private utilisateurRepository : UtilisateurRepository
+
+    public TransactionService()
+
+        debut
+
+            transactionRepository <- nouveau TransactionRepository()
+            categorieRepository <- nouveau CategorieRepository()
+            budgetRepository <- nouveau BudgetRepository()
+            utilisateurRepository <- nouveau UtilisateurRepository()
+
+        fin
+
+    public fonction ajouter(transaction : Transaction) : Booléen
+
+        debut
+
+            categorie <- categorieRepository.rechercherParId(transaction.idCategorie)
+
+            utilisateur <- utilisateurRepository.rechercherParId(transaction.idUtilisateur)
+
+            Si(categorie.type == DEPENSE)Alors
+
+                Si(utilisateur.solde < transaction.montant)Alors
+
+                    Retourner(Faux)
+
+                FinSi
+
+                utilisateur.solde <- utilisateur.solde - transaction.montant
+
+                budgetRepository.ajouterConsommation(transaction)
+
+            Sinon
+
+                utilisateur.solde <- utilisateur.solde + transaction.montant
+
+            FinSi
+
+            transactionRepository.ajouter(transaction)
+
+            utilisateurRepository.modifierSolde(utilisateur)
+
+            Retourner(Vrai)
+
+        fin
+
+    public fonction modifier(transaction : Transaction) : Booléen
+
+        debut
+
+            transactionRepository.modifier(transaction)
+
+            RecalculerSolde()
+
+            RecalculerBudget()
+
+            Retourner(Vrai)
+
+        fin
+
+    public fonction supprimer(idTransaction : Entier) : Booléen
+
+        debut
+
+            transactionRepository.supprimer(idTransaction)
+
+            RecalculerSolde()
+
+            RecalculerBudget()
+
+            Retourner(Vrai)
+
+        fin
+
+    public fonction lister() : Liste<Transaction>
+
+        debut
+
+            Retourner(transactionRepository.lister())
+
+        fin
+
+Fin Classe

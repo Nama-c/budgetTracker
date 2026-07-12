@@ -1,0 +1,33 @@
+Classe CategorieController
+    private categorieService : CategorieService
+    public CategorieController()
+        debut
+            categorieService <- nouveau CategorieService()
+        fin
+
+    public fonction ajouter(categorie : Categorie) : Booléen
+        debut
+            retourner categorieService.ajouter(categorie)
+        fin
+
+    public fonction modifier(categorie : Categorie) : Booléen
+        debut
+            retourner categorieService.modifier(categorie)
+        fin
+
+    public fonction supprimer(idCategorie : Entier) : Booléen
+        debut
+            retourner categorieService.supprimer(idCategorie)
+        fin
+
+    public fonction listerUtilisateur() : Liste<Categorie>
+        debut
+            retourner categorieService.listerUtilisateur()
+        fin
+
+    public fonction listerCommunes() : Liste<Categorie>
+        debut
+            retourner categorieService.listerCommunes()
+        fin
+
+Fin Classe

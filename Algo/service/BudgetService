@@ -1,0 +1,41 @@
+Classe BudgetService
+
+    private budgetRepository : BudgetRepository
+
+    public BudgetService()
+
+        debut
+            budgetRepository <- nouveau BudgetRepository()
+        fin
+
+    public fonction ajouter(budget : Budget) : Booléen
+
+        debut
+
+            Si(budgetRepository.existe(budget))Alors
+                Retourner(Faux)
+            FinSi
+
+            Retourner(budgetRepository.ajouter(budget))
+
+        fin
+
+    public fonction modifier(budget : Budget) : Booléen
+
+        debut
+            Retourner(budgetRepository.modifier(budget))
+        fin
+
+    public fonction supprimer(idBudget : Entier) : Booléen
+
+        debut
+            Retourner(budgetRepository.supprimer(idBudget))
+        fin
+
+    public fonction lister() : Liste<Budget>
+
+        debut
+            Retourner(budgetRepository.lister())
+        fin
+
+Fin Classe

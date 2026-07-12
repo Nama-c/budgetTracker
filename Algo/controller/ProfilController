@@ -1,0 +1,18 @@
+Classe ProfilController
+    private profilService : ProfilService
+    public ProfilController()
+        debut
+            profilService <- nouveau ProfilService()
+        fin
+
+    public fonction modifier(utilisateur : Utilisateur) : Booléen
+        debut
+            retourner profilService.modifier(utilisateur)
+        fin
+
+    public fonction consulter() : Utilisateur
+        debut
+            retourner profilService.consulter()
+        fin
+
+Fin Classe

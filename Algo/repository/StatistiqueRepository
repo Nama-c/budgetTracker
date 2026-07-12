@@ -1,0 +1,31 @@
+Classe StatistiqueRepository
+
+    private transactionRepository : TransactionRepository
+    private budgetRepository : BudgetRepository
+
+    public StatistiqueRepository()
+
+        debut
+
+            transactionRepository <- nouveau TransactionRepository()
+            budgetRepository <- nouveau BudgetRepository()
+
+        fin
+
+    public fonction nombreTransactions() : Entier
+
+        debut
+
+            Retourner(transactionRepository.nbTransactions)
+
+        fin
+
+    public fonction nombreBudgets() : Entier
+
+        debut
+
+            Retourner(budgetRepository.nbBudgets)
+
+        fin
+
+Fin Classe

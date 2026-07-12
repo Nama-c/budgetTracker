@@ -1,0 +1,77 @@
+Classe AuthService
+
+    private utilisateurRepository : UtilisateurRepository
+
+    public AuthService()
+
+        debut
+
+            utilisateurRepository <- nouveau UtilisateurRepository()
+
+        fin
+
+    public fonction inscription(utilisateur : Utilisateur) : Booléen
+
+        Variables
+
+            existe : Utilisateur
+
+        debut
+
+            existe <- utilisateurRepository.rechercherParEmail(utilisateur.email)
+
+            Si(existe != Null)Alors
+
+                Retourner(Faux)
+
+            Sinon
+
+                Retourner(utilisateurRepository.ajouter(utilisateur))
+
+            FinSi
+
+        fin
+
+    public fonction connexion(email : Chaine,motDePasse : Chaine) : Booléen
+
+        Variables
+
+            utilisateur : Utilisateur
+
+        debut
+
+            utilisateur <- utilisateurRepository.rechercherParEmail(email)
+
+            Si(utilisateur == Null)Alors
+
+                Retourner(Faux)
+
+            FinSi
+
+            Si(utilisateur.motDePasse != motDePasse)Alors
+
+                Retourner(Faux)
+
+            FinSi
+
+            Si(utilisateur.statut == INACTIF)Alors
+
+                Retourner(Faux)
+
+            FinSi
+
+            Session.utilisateurConnecte <- utilisateur
+
+            Retourner(Vrai)
+
+        fin
+
+    public procedure deconnexion()
+
+        debut
+
+            Session.utilisateurConnecte <- Null
+
+        fin
+
+Fin Classe

@@ -1,0 +1,113 @@
+Classe Categorie
+
+    private idCategorie : Entier
+    private nom : Chaîne
+    private type : TypeCategorie
+    private idUtilisateur : Entier
+    private origine : Chaîne
+    private dateCreation : DateHeure
+
+    public Categorie(
+        idCategorie,
+        nom,
+        type,
+        idUtilisateur,
+        origine,
+        dateCreation
+    )
+        debut
+
+            this.idCategorie <- idCategorie
+            this.nom <- nom
+            this.type <- type
+            this.idUtilisateur <- idUtilisateur
+            this.origine <- origine
+            this.dateCreation <- dateCreation
+
+        fin
+
+    public fonction getIdCategorie() : Entier
+        debut
+
+            retourner this.idCategorie
+
+        fin
+
+    public procedure setIdCategorie(idCategorie)
+        debut
+
+            this.idCategorie <- idCategorie
+
+        fin
+
+    public fonction getNom() : Chaîne
+        debut
+
+            retourner this.nom
+
+        fin
+
+    public procedure setNom(nom)
+        debut
+
+            this.nom <- nom
+
+        fin
+
+    public fonction getType() : TypeCategorie
+        debut
+
+            retourner this.type
+
+        fin
+
+    public procedure setType(type)
+        debut
+
+            this.type <- type
+
+        fin
+
+    public fonction getIdUtilisateur() : Entier
+        debut
+
+            retourner this.idUtilisateur
+
+        fin
+
+    public procedure setIdUtilisateur(idUtilisateur)
+        debut
+
+            this.idUtilisateur <- idUtilisateur
+
+        fin
+
+    public fonction getOrigine() : Chaîne
+        debut
+
+            retourner this.origine
+
+        fin
+
+    public procedure setOrigine(origine)
+        debut
+
+            this.origine <- origine
+
+        fin
+
+    public fonction getDateCreation() : DateHeure
+        debut
+
+            retourner this.dateCreation
+
+        fin
+
+    public procedure setDateCreation(dateCreation)
+        debut
+
+            this.dateCreation <- dateCreation
+
+        fin
+
+Fin Classe

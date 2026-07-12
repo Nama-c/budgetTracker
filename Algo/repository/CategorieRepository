@@ -1,0 +1,52 @@
+Classe CategorieRepository
+
+    private categories[100] : Tableau Categorie
+    private nbCategories : Entier
+
+    public CategorieRepository()
+
+        debut
+
+            nbCategories <- 0
+
+        fin
+
+    public fonction ajouter(categorie : Categorie) : Booléen
+
+        debut
+
+            categories[nbCategories] <- categorie
+
+            nbCategories <- nbCategories + 1
+
+            Retourner(Vrai)
+
+        fin
+
+    public fonction rechercherParId(idCategorie : Entier) : Categorie
+
+        debut
+
+            Pour(i <- 0 ; i < nbCategories ; i <- i + 1)Faire
+
+                Si(categories[i].idCategorie == idCategorie)Alors
+
+                    Retourner(categories[i])
+
+                FinSi
+
+            FinPour
+
+            Retourner(Null)
+
+        fin
+
+    public fonction lister() : Tableau<Categorie>
+
+        debut
+
+            Retourner(categories)
+
+        fin
+
+Fin Classe

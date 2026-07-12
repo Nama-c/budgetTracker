@@ -1,0 +1,17 @@
+Classe StatistiqueService
+
+    private statistiqueRepository : StatistiqueRepository
+
+    public StatistiqueService()
+
+        debut
+            statistiqueRepository <- nouveau StatistiqueRepository()
+        fin
+
+    public fonction afficherStatistiques() : Statistique
+
+        debut
+            Retourner(statistiqueRepository.afficher())
+        fin
+
+Fin Classe

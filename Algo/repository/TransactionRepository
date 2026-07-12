@@ -1,0 +1,98 @@
+Classe TransactionRepository
+
+    private transactions[1000] : Tableau Transaction
+    private nbTransactions : Entier
+
+    public TransactionRepository()
+
+        debut
+
+            nbTransactions <- 0
+
+        fin
+
+    public fonction ajouter(transaction : Transaction) : Booléen
+
+        debut
+
+            transactions[nbTransactions] <- transaction
+
+            nbTransactions <- nbTransactions + 1
+
+            Retourner(Vrai)
+
+        fin
+
+    public fonction modifier(transaction : Transaction) : Booléen
+
+        debut
+
+            Pour(i <- 0 ; i < nbTransactions ; i <- i + 1)Faire
+
+                Si(transactions[i].idTransaction == transaction.idTransaction)Alors
+
+                    transactions[i] <- transaction
+
+                    Retourner(Vrai)
+
+                FinSi
+
+            FinPour
+
+            Retourner(Faux)
+
+        fin
+
+    public fonction supprimer(idTransaction : Entier) : Booléen
+
+        debut
+
+            Pour(i <- 0 ; i < nbTransactions ; i <- i + 1)Faire
+
+                Si(transactions[i].idTransaction == idTransaction)Alors
+
+                    Pour(j <- i ; j < nbTransactions-1 ; j <- j + 1)Faire
+
+                        transactions[j] <- transactions[j+1]
+
+                    FinPour
+
+                    nbTransactions <- nbTransactions - 1
+
+                    Retourner(Vrai)
+
+                FinSi
+
+            FinPour
+
+            Retourner(Faux)
+
+        fin
+
+    public fonction rechercherParId(idTransaction : Entier) : Transaction
+
+        debut
+
+            Pour(i <- 0 ; i < nbTransactions ; i <- i + 1)Faire
+
+                Si(transactions[i].idTransaction == idTransaction)Alors
+
+                    Retourner(transactions[i])
+
+                FinSi
+
+            FinPour
+
+            Retourner(Null)
+
+        fin
+
+    public fonction lister() : Tableau Transaction
+
+        debut
+
+            Retourner(transactions)
+
+        fin
+
+Fin Classe

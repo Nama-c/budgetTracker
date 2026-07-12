@@ -1,0 +1,21 @@
+Classe App
+
+    private accueilView : AccueilView
+
+    public App()
+
+        debut
+
+            accueilView <- nouveau AccueilView()
+
+        fin
+
+    public procedure executer()
+
+        debut
+
+            accueilView.afficher()
+
+        fin
+
+Fin Classe

@@ -1,0 +1,21 @@
+Classe StatistiqueView
+
+    private statistiqueController : StatistiqueController
+
+    public StatistiqueView()
+
+        debut
+
+            statistiqueController <- nouveau StatistiqueController()
+
+        fin
+
+    public procedure afficher()
+
+        debut
+
+            afficherStatistiques()
+
+        fin
+
+Fin Classe

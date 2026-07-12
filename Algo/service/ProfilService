@@ -1,0 +1,23 @@
+Classe ProfilService
+
+    private utilisateurRepository : UtilisateurRepository
+
+    public ProfilService()
+
+        debut
+            utilisateurRepository <- nouveau UtilisateurRepository()
+        fin
+
+    public fonction consulter() : Utilisateur
+
+        debut
+            Retourner(Session.utilisateurConnecte)
+        fin
+
+    public fonction modifier(utilisateur : Utilisateur) : Booléen
+
+        debut
+            Retourner(utilisateurRepository.modifier(utilisateur))
+        fin
+
+Fin Classe

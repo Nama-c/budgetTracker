@@ -1,0 +1,147 @@
+Classe Budget
+
+    private idBudget : Entier
+    private idUtilisateur : Entier
+    private idCategorie : Entier
+    private montantMaximum : Réel
+    private montantConsomme : Réel
+    private montantRestant : Réel
+    private derniereMiseAJour : DateHeure
+    private nomCategorie : Chaîne
+
+    public Budget(
+        idBudget,
+        idUtilisateur,
+        idCategorie,
+        montantMaximum,
+        montantConsomme,
+        montantRestant,
+        derniereMiseAJour,
+        nomCategorie
+    )
+        debut
+
+            this.idBudget <- idBudget
+            this.idUtilisateur <- idUtilisateur
+            this.idCategorie <- idCategorie
+            this.montantMaximum <- montantMaximum
+            this.montantConsomme <- montantConsomme
+            this.montantRestant <- montantRestant
+            this.derniereMiseAJour <- derniereMiseAJour
+            this.nomCategorie <- nomCategorie
+
+        fin
+
+    public fonction getIdBudget() : Entier
+        debut
+
+            retourner this.idBudget
+
+        fin
+
+    public procedure setIdBudget(idBudget)
+        debut
+
+            this.idBudget <- idBudget
+
+        fin
+
+    public fonction getIdUtilisateur() : Entier
+        debut
+
+            retourner this.idUtilisateur
+
+        fin
+
+    public procedure setIdUtilisateur(idUtilisateur)
+        debut
+
+            this.idUtilisateur <- idUtilisateur
+
+        fin
+
+    public fonction getIdCategorie() : Entier
+        debut
+
+            retourner this.idCategorie
+
+        fin
+
+    public procedure setIdCategorie(idCategorie)
+        debut
+
+            this.idCategorie <- idCategorie
+
+        fin
+
+    public fonction getMontantMaximum() : Réel
+        debut
+
+            retourner this.montantMaximum
+
+        fin
+
+    public procedure setMontantMaximum(montantMaximum)
+        debut
+
+            this.montantMaximum <- montantMaximum
+
+        fin
+
+    public fonction getMontantConsomme() : Réel
+        debut
+
+            retourner this.montantConsomme
+
+        fin
+
+    public procedure setMontantConsomme(montantConsomme)
+        debut
+
+            this.montantConsomme <- montantConsomme
+
+        fin
+
+    public fonction getMontantRestant() : Réel
+        debut
+
+            retourner this.montantRestant
+
+        fin
+
+    public procedure setMontantRestant(montantRestant)
+        debut
+
+            this.montantRestant <- montantRestant
+
+        fin
+
+    public fonction getDerniereMiseAJour() : DateHeure
+        debut
+
+            retourner this.derniereMiseAJour
+
+        fin
+
+    public procedure setDerniereMiseAJour(derniereMiseAJour)
+        debut
+
+            this.derniereMiseAJour <- derniereMiseAJour
+
+        fin
+
+    public fonction getNomCategorie() : Chaîne
+        debut
+
+            retourner this.nomCategorie
+
+        fin
+
+    public procedure setNomCategorie(nomCategorie)
+        debut
+
+            this.nomCategorie <- nomCategorie
+
+        fin
+
+Fin Classe

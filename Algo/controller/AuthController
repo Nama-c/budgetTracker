@@ -1,0 +1,29 @@
+Classe AuthController
+    private authService : AuthService
+    public AuthController()
+        debut
+            authService <- nouveau AuthService()
+        fin
+
+    public fonction inscription(utilisateur : Utilisateur) : Booléen
+        Variable
+            resultat : Booléen
+        debut
+            resultat <- authService.inscription(utilisateur)
+            retourner resultat
+        fin
+
+    public fonction connexion(email : Chaîne,motDePasse : Chaîne) : Booléen
+        Variable
+            resultat : Booléen
+        debut
+            resultat <- authService.connexion(email,motDePasse)
+            retourner resultat
+        fin
+
+    public procedure deconnexion()
+        debut
+            authService.deconnexion()
+        fin
+
+Fin Classe

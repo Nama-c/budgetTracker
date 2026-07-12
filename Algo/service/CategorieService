@@ -1,0 +1,65 @@
+Classe CategorieService
+
+    private categorieRepository : CategorieRepository
+
+    public CategorieService()
+
+        debut
+
+            categorieRepository <- nouveau CategorieRepository()
+
+        fin
+
+    public fonction ajouter(categorie : Categorie) : Booléen
+
+        Variables
+
+            categorieExiste : Categorie
+
+        debut
+
+            categorieExiste <- categorieRepository.rechercherParNom(categorie.nom)
+
+            Si(categorieExiste != Null)Alors
+
+                Retourner(Faux)
+
+            FinSi
+
+            Retourner(categorieRepository.ajouter(categorie))
+
+        fin
+
+    public fonction modifier(categorie : Categorie) : Booléen
+
+        debut
+
+            Retourner(categorieRepository.modifier(categorie))
+
+        fin
+
+    public fonction supprimer(idCategorie : Entier) : Booléen
+
+        debut
+
+            Retourner(categorieRepository.supprimer(idCategorie))
+
+        fin
+
+    public fonction listerUtilisateur() : Liste<Categorie>
+
+        debut
+
+            Retourner(categorieRepository.listerUtilisateur())
+
+        fin
+
+    public fonction listerCommunes() : Liste<Categorie>
+
+        debut
+
+            Retourner(categorieRepository.listerCommunes())
+
+        fin
+
+Fin Classe

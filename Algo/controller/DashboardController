@@ -1,0 +1,23 @@
+Classe DashboardController
+    private dashboardService : DashboardService
+    public DashboardController()
+        debut
+            dashboardService <- nouveau DashboardService()
+        fin
+
+    public fonction revenus() : Réel
+        debut
+            retourner dashboardService.revenus()
+        fin
+
+    public fonction depenses() : Réel
+        debut
+            retourner dashboardService.depenses()
+        fin
+
+    public fonction statistiques() : Statistique
+        debut
+            retourner dashboardService.statistiques()
+        fin
+
+Fin Classe

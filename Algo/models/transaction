@@ -1,0 +1,164 @@
+Classe Transaction
+
+    private idTransaction : Entier
+    private montant : Réel
+    private dateTransaction : Date
+    private description : Chaîne
+    private idUtilisateur : Entier
+    private idCategorie : Entier
+    private dateCreation : DateHeure
+    private type : TypeCategorie
+    private nomCategorie : Chaîne
+
+    public Transaction(
+        idTransaction,
+        montant,
+        dateTransaction,
+        description,
+        idUtilisateur,
+        idCategorie,
+        dateCreation,
+        type,
+        nomCategorie
+    )
+        debut
+
+            this.idTransaction <- idTransaction
+            this.montant <- montant
+            this.dateTransaction <- dateTransaction
+            this.description <- description
+            this.idUtilisateur <- idUtilisateur
+            this.idCategorie <- idCategorie
+            this.dateCreation <- dateCreation
+            this.type <- type
+            this.nomCategorie <- nomCategorie
+
+        fin
+
+    public fonction getIdTransaction() : Entier
+        debut
+
+            retourner this.idTransaction
+
+        fin
+
+    public procedure setIdTransaction(idTransaction)
+        debut
+
+            this.idTransaction <- idTransaction
+
+        fin
+
+    public fonction getMontant() : Réel
+        debut
+
+            retourner this.montant
+
+        fin
+
+    public procedure setMontant(montant)
+        debut
+
+            this.montant <- montant
+
+        fin
+
+    public fonction getDateTransaction() : Date
+        debut
+
+            retourner this.dateTransaction
+
+        fin
+
+    public procedure setDateTransaction(dateTransaction)
+        debut
+
+            this.dateTransaction <- dateTransaction
+
+        fin
+
+    public fonction getDescription() : Chaîne
+        debut
+
+            retourner this.description
+
+        fin
+
+    public procedure setDescription(description)
+        debut
+
+            this.description <- description
+
+        fin
+
+    public fonction getIdUtilisateur() : Entier
+        debut
+
+            retourner this.idUtilisateur
+
+        fin
+
+    public procedure setIdUtilisateur(idUtilisateur)
+        debut
+
+            this.idUtilisateur <- idUtilisateur
+
+        fin
+
+    public fonction getIdCategorie() : Entier
+        debut
+
+            retourner this.idCategorie
+
+        fin
+
+    public procedure setIdCategorie(idCategorie)
+        debut
+
+            this.idCategorie <- idCategorie
+
+        fin
+
+    public fonction getDateCreation() : DateHeure
+        debut
+
+            retourner this.dateCreation
+
+        fin
+
+    public procedure setDateCreation(dateCreation)
+        debut
+
+            this.dateCreation <- dateCreation
+
+        fin
+
+    public fonction getType() : TypeCategorie
+        debut
+
+            retourner this.type
+
+        fin
+
+    public procedure setType(type)
+        debut
+
+            this.type <- type
+
+        fin
+
+    public fonction getNomCategorie() : Chaîne
+        debut
+
+            retourner this.nomCategorie
+
+        fin
+
+    public procedure setNomCategorie(nomCategorie)
+        debut
+
+            this.nomCategorie <- nomCategorie
+
+        fin
+
+Fin Classe

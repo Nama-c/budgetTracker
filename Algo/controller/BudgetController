@@ -1,0 +1,28 @@
+Classe BudgetController
+    private budgetService : BudgetService
+    public BudgetController()
+        debut
+            budgetService <- nouveau BudgetService()
+        fin
+
+    public fonction ajouter(budget : Budget) : Booléen
+        debut
+            retourner budgetService.ajouter(budget)
+        fin
+
+    public fonction modifier(budget : Budget) : Booléen
+        debut
+            retourner budgetService.modifier(budget)
+        fin
+
+    public fonction supprimer(idBudget : Entier) : Booléen
+        debut
+            retourner budgetService.supprimer(idBudget)
+        fin
+
+    public fonction lister() : Liste<Budget>
+        debut
+            retourner budgetService.lister()
+        fin
+
+Fin Classe

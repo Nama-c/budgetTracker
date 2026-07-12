@@ -1,0 +1,23 @@
+Classe ProfilView
+
+    private profilController : ProfilController
+
+    public ProfilView()
+
+        debut
+
+            profilController <- nouveau ProfilController()
+
+        fin
+
+    public procedure afficher()
+
+        debut
+
+            Ecrire("===== PROFIL =====")
+
+            consulter()
+
+        fin
+
+Fin Classe

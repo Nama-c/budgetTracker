@@ -1,0 +1,58 @@
+Classe TransactionView
+
+    private transactionController : TransactionController
+
+    public TransactionView()
+
+        debut
+
+            transactionController <- nouveau TransactionController()
+
+        fin
+
+    public procedure afficher()
+
+        Variables
+
+            choix : Entier
+
+        debut
+
+            Faire
+
+                Ecrire("===== TRANSACTIONS =====")
+                Ecrire("1. Lister")
+                Ecrire("2. Ajouter")
+                Ecrire("3. Modifier")
+                Ecrire("4. Supprimer")
+                Ecrire("0. Retour")
+
+                Lire(choix)
+
+                Cas(choix)Valeur
+
+                    Cas 1:
+                        lister()
+
+                    Cas 2:
+                        ajouter()
+
+                    Cas 3:
+                        modifier()
+
+                    Cas 4:
+                        supprimer()
+
+                    Cas 0:
+                        Ecrire("Retour")
+
+                    Defaut:
+                        Ecrire("Choix invalide")
+
+                FinCas
+
+            TantQue(choix <> 0)
+
+        fin
+
+Fin Classe

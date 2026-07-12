@@ -1,0 +1,16 @@
+{
+    "name": "a0000399/php",
+    "description": "Partie Web de l'application de gestion de budget personnel",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "chris-dev",
+            "email": "chrisnama@icloud.com"
+        }
+    ],
+    "require": {}
+}

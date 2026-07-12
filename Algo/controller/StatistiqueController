@@ -1,0 +1,13 @@
+Classe StatistiqueController
+    private statistiqueService : StatistiqueService
+    public StatistiqueController()
+        debut
+            statistiqueService <- nouveau StatistiqueService()
+        fin
+
+    public fonction afficherStatistiques() : Statistique
+        debut
+            retourner statistiqueService.afficherStatistiques()
+        fin
+
+Fin Classe

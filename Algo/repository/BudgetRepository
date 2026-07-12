@@ -1,0 +1,98 @@
+Classe BudgetRepository
+
+    private budgets[100] : Tableau Budget
+    private nbBudgets : Entier
+
+    public BudgetRepository()
+
+        debut
+
+            nbBudgets <- 0
+
+        fin
+
+    public fonction ajouter(budget : Budget) : Booléen
+
+        debut
+
+            budgets[nbBudgets] <- budget
+
+            nbBudgets <- nbBudgets + 1
+
+            Retourner(Vrai)
+
+        fin
+
+    public fonction modifier(budget : Budget) : Booléen
+
+        debut
+
+            Pour(i <- 0 ; i < nbBudgets ; i <- i + 1)Faire
+
+                Si(budgets[i].idBudget == budget.idBudget)Alors
+
+                    budgets[i] <- budget
+
+                    Retourner(Vrai)
+
+                FinSi
+
+            FinPour
+
+            Retourner(Faux)
+
+        fin
+
+    public fonction supprimer(idBudget : Entier) : Booléen
+
+        debut
+
+            Pour(i <- 0 ; i < nbBudgets ; i <- i + 1)Faire
+
+                Si(budgets[i].idBudget == idBudget)Alors
+
+                    Pour(j <- i ; j < nbBudgets-1 ; j <- j + 1)Faire
+
+                        budgets[j] <- budgets[j+1]
+
+                    FinPour
+
+                    nbBudgets <- nbBudgets - 1
+
+                    Retourner(Vrai)
+
+                FinSi
+
+            FinPour
+
+            Retourner(Faux)
+
+        fin
+
+    public fonction rechercherParId(idBudget : Entier) : Budget
+
+        debut
+
+            Pour(i <- 0 ; i < nbBudgets ; i <- i + 1)Faire
+
+                Si(budgets[i].idBudget == idBudget)Alors
+
+                    Retourner(budgets[i])
+
+                FinSi
+
+            FinPour
+
+            Retourner(Null)
+
+        fin
+
+    public fonction lister() : Tableau Budget
+
+        debut
+
+            Retourner(budgets)
+
+        fin
+
+Fin Classe

@@ -1,0 +1,96 @@
+Classe Statistique
+
+    private revenus : Réel
+    private depenses : Réel
+    private solde : Réel
+    private nombreTransactions : Entier
+    private nombreBudgets : Entier
+
+    public Statistique(
+        revenus,
+        depenses,
+        solde,
+        nombreTransactions,
+        nombreBudgets
+    )
+        debut
+
+            this.revenus <- revenus
+            this.depenses <- depenses
+            this.solde <- solde
+            this.nombreTransactions <- nombreTransactions
+            this.nombreBudgets <- nombreBudgets
+
+        fin
+
+    public fonction getRevenus() : Réel
+        debut
+
+            retourner this.revenus
+
+        fin
+
+    public procedure setRevenus(revenus)
+        debut
+
+            this.revenus <- revenus
+
+        fin
+
+    public fonction getDepenses() : Réel
+        debut
+
+            retourner this.depenses
+
+        fin
+
+    public procedure setDepenses(depenses)
+        debut
+
+            this.depenses <- depenses
+
+        fin
+
+    public fonction getSolde() : Réel
+        debut
+
+            retourner this.solde
+
+        fin
+
+    public procedure setSolde(solde)
+        debut
+
+            this.solde <- solde
+
+        fin
+
+    public fonction getNombreTransactions() : Entier
+        debut
+
+            retourner this.nombreTransactions
+
+        fin
+
+    public procedure setNombreTransactions(nombreTransactions)
+        debut
+
+            this.nombreTransactions <- nombreTransactions
+
+        fin
+
+    public fonction getNombreBudgets() : Entier
+        debut
+
+            retourner this.nombreBudgets
+
+        fin
+
+    public procedure setNombreBudgets(nombreBudgets)
+        debut
+
+            this.nombreBudgets <- nombreBudgets
+
+        fin
+
+Fin Classe

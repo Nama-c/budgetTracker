@@ -1,0 +1,35 @@
+Classe ConnexionView
+
+    private authController : AuthController
+
+    public ConnexionView()
+
+        debut
+            authController <- nouveau AuthController()
+        fin
+
+    public procedure afficher()
+
+        Variables
+
+            email : Chaine
+            motDePasse : Chaine
+
+        debut
+
+            ecrire ("===== CONNEXION =====")
+
+            lire(email)
+            lire(motDePasse)
+
+            Si (authController.connexion(email,motDePasse)) Alors
+                DashboardView.afficher()
+            Sinon
+                ecrire ("Email ou mot de passe incorrect")
+            FinSi
+
+        fin
+
+Fin Classe
+
+

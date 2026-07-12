@@ -1,0 +1,39 @@
+Classe InscriptionView
+
+    private authController : AuthController
+
+    public InscriptionView()
+
+        debut
+            authController <- nouveau AuthController()
+        fin
+
+    public procedure afficher()
+
+        Variable
+
+            utilisateur : Utilisateur
+
+        debut
+            faire
+                lire (nom)
+                lire (prenom)
+                lire (email)
+                lire (motDePasse)
+            tantQue(nom =="" ou prenom =="" ou email =="" ou motDePasse =="")
+
+            utilisateur <- nouveau Utilisateur(...)
+
+            Si (authController.inscription(utilisateur)) Alors
+
+                ecrire ("Inscription réussie")
+
+            Sinon
+
+                ecrire ("Impossible de créer le compte")
+
+            FinSi
+
+        fin
+
+Fin Classe

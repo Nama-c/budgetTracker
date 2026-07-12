@@ -1,0 +1,28 @@
+Classe TransactionController
+    private transactionService : TransactionService
+    public TransactionController()
+        debut
+            transactionService <- nouveau TransactionService()
+        fin
+
+    public fonction ajouter(transaction : Transaction) : Booléen
+        debut
+            retourner transactionService.ajouter(transaction)
+        fin
+
+    public fonction modifier(transaction : Transaction) : Booléen
+        debut
+            retourner transactionService.modifier(transaction)
+        fin
+
+    public fonction supprimer(idTransaction : Entier) : Booléen
+        debut
+            retourner transactionService.supprimer(idTransaction)
+        fin
+
+    public fonction lister() : Liste<Transaction>
+        debut
+            retourner transactionService.lister()
+        fin
+
+Fin Classe

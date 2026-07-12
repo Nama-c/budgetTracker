@@ -1,0 +1,164 @@
+Classe Utilisateur
+
+    private idUtilisateur : Entier
+    private nom : Chaîne
+    private prenom : Chaîne
+    private email : Chaîne
+    private motDePasse : Chaîne
+    private role : Role
+    private statut : StatutUtilisateur
+    private solde : Réel
+    private dateInscription : DateHeure
+
+    public Utilisateur(
+        idUtilisateur,
+        nom,
+        prenom,
+        email,
+        motDePasse,
+        role,
+        statut,
+        solde,
+        dateInscription
+    )
+        debut
+
+            this.idUtilisateur <- idUtilisateur
+            this.nom <- nom
+            this.prenom <- prenom
+            this.email <- email
+            this.motDePasse <- motDePasse
+            this.role <- role
+            this.statut <- statut
+            this.solde <- solde
+            this.dateInscription <- dateInscription
+
+        fin
+
+    public fonction getIdUtilisateur() : Entier
+        debut
+
+            retourner this.idUtilisateur
+
+        fin
+
+    public procedure setIdUtilisateur(idUtilisateur)
+        debut
+
+            this.idUtilisateur <- idUtilisateur
+
+        fin
+
+    public fonction getNom() : Chaîne
+        debut
+
+            retourner this.nom
+
+        fin
+
+    public procedure setNom(nom)
+        debut
+
+            this.nom <- nom
+
+        fin
+
+    public fonction getPrenom() : Chaîne
+        debut
+
+            retourner this.prenom
+
+        fin
+
+    public procedure setPrenom(prenom)
+        debut
+
+            this.prenom <- prenom
+
+        fin
+
+    public fonction getEmail() : Chaîne
+        debut
+
+            retourner this.email
+
+        fin
+
+    public procedure setEmail(email)
+        debut
+
+            this.email <- email
+
+        fin
+
+    public fonction getMotDePasse() : Chaîne
+        debut
+
+            retourner this.motDePasse
+
+        fin
+
+    public procedure setMotDePasse(motDePasse)
+        debut
+
+            this.motDePasse <- motDePasse
+
+        fin
+
+    public fonction getRole() : Role
+        debut
+
+            retourner this.role
+
+        fin
+
+    public procedure setRole(role)
+        debut
+
+            this.role <- role
+
+        fin
+
+    public fonction getStatut() : StatutUtilisateur
+        debut
+
+            retourner this.statut
+
+        fin
+
+    public procedure setStatut(statut)
+        debut
+
+            this.statut <- statut
+
+        fin
+
+    public fonction getSolde() : Réel
+        debut
+
+            retourner this.solde
+
+        fin
+
+    public procedure setSolde(solde)
+        debut
+
+            this.solde <- solde
+
+        fin
+
+    public fonction getDateInscription() : DateHeure
+        debut
+
+            retourner this.dateInscription
+
+        fin
+
+    public procedure setDateInscription(dateInscription)
+        debut
+
+            this.dateInscription <- dateInscription
+
+        fin
+
+Fin Classe

@@ -1,0 +1,60 @@
+Classe DashboardView
+
+    private dashboardController : DashboardController
+
+    public DashboardView()
+
+        debut
+            dashboardController <- nouveau DashboardController()
+        fin
+
+    public procedure afficher()
+
+        Variable
+
+            choix : Entier
+
+        debut
+
+            faire
+
+                ecrire ("Dashboard)
+
+                ecrire ("1. Transactions")
+                ecrire ("2. Budgets")
+                ecrire ("3. Catégories")
+                ecrire ("4. Statistiques")
+                ecrire ("5. Profil")
+                ecrire ("6. Déconnexion")
+
+                lire(choix)
+
+                cas (choix) vaut
+
+                    Cas 1 :
+                        TransactionView.afficher()
+
+                    Cas 2 :
+                        BudgetView.afficher()
+
+                    Cas 3 :
+                        CategorieView.afficher()
+
+                    Cas 4 :
+                        StatistiqueView.afficher()
+
+                    Cas 5 :
+                        ProfilView.afficher()
+
+                    Cas 6 :
+                        AuthController.deconnexion()
+
+                    defaut :
+                        ecrire (" Choix invalide")
+                FinSelon
+
+            TantQue (choix != 6 )
+
+        fin
+
+Fin Classe

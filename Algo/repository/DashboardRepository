@@ -1,0 +1,61 @@
+Classe DashboardRepository
+
+    private transactionRepository : TransactionRepository
+
+    public DashboardRepository()
+
+        debut
+
+            transactionRepository <- nouveau TransactionRepository()
+
+        fin
+
+    public fonction calculerRevenus() : Réel
+
+        Variables
+
+            total : Réel
+
+        debut
+
+            total <- 0
+
+            Pour(i <- 0 ; i < transactionRepository.nbTransactions ; i <- i + 1)Faire
+
+                Si(transactionRepository.transactions[i].type == REVENU)Alors
+
+                    total <- total + transactionRepository.transactions[i].montant
+
+                FinSi
+
+            FinPour
+
+            Retourner(total)
+
+        fin
+
+    public fonction calculerDepenses() : Réel
+
+        Variables
+
+            total : Réel
+
+        debut
+
+            total <- 0
+
+            Pour(i <- 0 ; i < transactionRepository.nbTransactions ; i <- i + 1)Faire
+
+                Si(transactionRepository.transactions[i].type == DEPENSE)Alors
+
+                    total <- total + transactionRepository.transactions[i].montant
+
+                FinSi
+
+            FinPour
+
+            Retourner(total)
+
+        fin
+
+Fin Classe

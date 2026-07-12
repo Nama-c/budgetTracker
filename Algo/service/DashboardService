@@ -1,0 +1,29 @@
+Classe DashboardService
+
+    private dashboardRepository : DashboardRepository
+
+    public DashboardService()
+
+        debut
+            dashboardRepository <- nouveau DashboardRepository()
+        fin
+
+    public fonction revenus() : Réel
+
+        debut
+            Retourner(dashboardRepository.revenus())
+        fin
+
+    public fonction depenses() : Réel
+
+        debut
+            Retourner(dashboardRepository.depenses())
+        fin
+
+    public fonction statistiques() : Statistique
+
+        debut
+            Retourner(dashboardRepository.statistiques())
+        fin
+
+Fin Classe

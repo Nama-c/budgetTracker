@@ -1,0 +1,31 @@
+Classe Admin hérite de Utilisateur
+
+    public Admin(
+        idUtilisateur,
+        nom,
+        prenom,
+        email,
+        motDePasse,
+        role,
+        statut,
+        solde,
+        dateInscription
+    )
+
+        debut
+
+            super(
+                idUtilisateur,
+                nom,
+                prenom,
+                email,
+                motDePasse,
+                role,
+                statut,
+                solde,
+                dateInscription
+            )
+
+        fin
+
+Fin Classe

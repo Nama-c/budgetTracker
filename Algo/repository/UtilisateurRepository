@@ -1,0 +1,62 @@
+Classe UtilisateurRepository
+
+    private utilisateurs[100] : Tableau Utilisateur
+    private nbUtilisateurs : Entier
+
+    public UtilisateurRepository()
+
+        debut
+
+            nbUtilisateurs <- 0
+
+        fin
+
+    public fonction ajouter(utilisateur : Utilisateur) : Booléen
+
+        debut
+
+            utilisateurs[nbUtilisateurs] <- utilisateur
+
+            nbUtilisateurs <- nbUtilisateurs + 1
+
+            Retourner(Vrai)
+
+        fin
+
+    public fonction rechercherParEmail(email : Chaine) : Utilisateur
+
+        debut
+
+            Pour(i <- 0 ; i < nbUtilisateurs ; i <- i + 1)Faire
+
+                Si(utilisateurs[i].email == email)Alors
+
+                    Retourner(utilisateurs[i])
+
+                FinSi
+
+            FinPour
+
+            Retourner(Null)
+
+        fin
+
+    public fonction rechercherParId(idUtilisateur : Entier) : Utilisateur
+
+        debut
+
+            Pour(i <- 0 ; i < nbUtilisateurs ; i <- i + 1)Faire
+
+                Si(utilisateurs[i].idUtilisateur == idUtilisateur)Alors
+
+                    Retourner(utilisateurs[i])
+
+                FinSi
+
+            FinPour
+
+            Retourner(Null)
+
+        fin
+
+Fin Classe

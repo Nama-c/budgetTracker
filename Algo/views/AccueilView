@@ -1,0 +1,39 @@
+Classe AccueilView
+
+    public procedure afficher()
+
+        Variable
+            choix : Entier
+
+        debut
+
+            faire
+
+                ecrire ("===== BUDGET TRACKER =====")
+                ecrire ("1. Connexion")
+                ecrire ("2. Inscription")
+                ecrire ("0. Quitter")
+
+                lire (choix)
+
+                cas (choix) vaut
+
+                    Cas 1 :
+                        ConnexionView.afficher()
+
+                    Cas 2 :
+                        InscriptionView.afficher()
+
+                    Cas 0 :
+                        Afficher "Au revoir"
+
+                    defaut :
+                        Afficher "Choix invalide"
+
+                Fincas
+
+            TantQue(choix != 0)
+
+        fin
+
+Fin Classe
